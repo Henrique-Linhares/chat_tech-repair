@@ -1,91 +1,171 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: saudacao
+    examples: |
+      - Olá
+      - Oi
+      - Bom dia
+      - Boa tarde
+      - Boa noite
+      - Oi, preciso de ajuda
+      - Olá, tudo bem?
+      - Ei
+      - Hey
+      - Olá, boa tarde
+      - Bom dia, preciso de ajuda
+      - Oi, pode me ajudar?
+      - Olá, estou precisando de assistência
+      - Boa noite, tudo bem?
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+  - intent: despedida
+    examples: |
+      - Tchau
+      - Obrigado, até mais
+      - Valeu, era isso
+      - Até logo
+      - Encerrar atendimento
+      - Até mais
+      - Obrigado pela ajuda
+      - Foi isso, obrigado
+      - Pode encerrar
+      - Obrigado, tchau
+      - Era só isso, até mais
+      - Valeu, tchau
+      - Encerrando
+      - Pode fechar o atendimento
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+  - intent: afirmar
+    examples: |
+      - Sim
+      - Isso mesmo
+      - Correto
+      - Exato
+      - Pode confirmar
+      - Sim, pode prosseguir
+      - Isso
+      - Exatamente
+      - Confirmo
+      - Está certo
+      - Sim, é isso
+      - Com certeza
+      - Claro
+      - Pode sim
+      - Afirmativo
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: negar
+    examples: |
+      - Não
+      - Não quero
+      - Cancelar
+      - Para
+      - Deixa pra lá
+      - Errei, quero recomeçar
+      - Não é isso
+      - Errado
+      - Não, obrigado
+      - Não preciso mais
+      - Pode cancelar
+      - Quero recomeçar
+      - Não, para
+      - Engano meu
+      - Não, deixa pra lá
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+  - intent: abrir_chamado
+    examples: |
+      - Quero abrir um chamado
+      - Quero registrar meu celular para conserto
+      - Preciso abrir um chamado de manutenção
+      - Meu aparelho está com defeito
+      - Quero levar meu celular para consertar
+      - Preciso de assistência técnica
+      - Meu celular parou de funcionar
+      - Preciso registrar um problema com meu dispositivo
+      - Quero cadastrar um aparelho com defeito
+      - Abrir ordem de serviço
+      - Meu smartphone não liga
+      - Quero fazer um orçamento de conserto
+      - Meu celular caiu e a tela quebrou
+      - Aparelho com problema na bateria
+      - Quero solicitar um reparo
+      - Meu [iPhone 13](modelo_celular) está com a tela quebrada
+      - Quero consertar meu [Galaxy S23](modelo_celular) [Samsung](marca_celular)
+      - Meu nome é [Carlos Silva](nome_cliente) e meu celular parou
+      - O problema é [tela preta após queda](descricao_problema)
+      - Meu [Moto G82](modelo_celular) [Motorola](marca_celular) não carrega
+      - Aparelho [Redmi Note 12](modelo_celular) [Xiaomi](marca_celular) com defeito
+      - Tenho um [A54](modelo_celular) [Samsung](marca_celular) com problema de tela
+      - [tela quebrada](descricao_problema) no meu celular
 
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+  - intent: consultar_status
+    examples: |
+      - Como está o meu conserto?
+      - Qual o status do meu reparo?
+      - Meu celular já ficou pronto?
+      - Quero saber sobre minha ordem de serviço
+      - Quando meu aparelho fica pronto?
+      - Como está o andamento do reparo?
+      - Verificar status do chamado
+      - Consultar minha ordem
+      - O conserto do meu celular terminou?
+      - Quero acompanhar meu pedido de reparo
+      - Me diga o status do meu aparelho
+      - Meu dispositivo está pronto para retirada?
+      - Estou aguardando meu celular, qual o status?
+      - Onde está meu aparelho?
+      - Quero rastrear minha ordem de serviço
+      - Quero consultar a ordem número [7](id_ordem)
+      - Qual o status do chamado [42](id_ordem)?
+      - Meu telefone é [11987654321](telefone), qual o status?
+      - Verificar ordem [15](id_ordem)
+      - Meu número é [(11) 91234-5678](telefone)
+      - Status do chamado [3](id_ordem)
+      - Ordem [10](id_ordem) está pronta?
 
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: atualizar_email
+    examples: |
+      - Quero mudar meu e-mail de contato
+      - Preciso atualizar meu e-mail
+      - Meu endereço de e-mail mudou
+      - Quero trocar o e-mail cadastrado
+      - Atualizar meu e-mail
+      - Meu e-mail está desatualizado
+      - Preciso corrigir meu e-mail
+      - Cadastrei o e-mail errado, quero corrigir
+      - Quero alterar meu contato de e-mail
+      - Mudar endereço de e-mail
+      - Trocar e-mail de contato
+      - Quero editar meu e-mail
+      - O meu e-mail antigo não existe mais
+      - Preciso registrar um novo e-mail
+      - Alterar dados de contato
+      - Meu novo e-mail é [carlos@gmail.com](email)
+      - Quero trocar para [novo@email.com](email)
+      - Meu telefone é [11999887766](telefone), quero mudar o e-mail
+      - Alterar e-mail para [contato@empresa.com](email)
+      - Meu número é [(11) 98765-4321](telefone)
+      - Atualizar para [joao.silva@outlook.com](email)
+
+  - synonym: modelo_celular
+    examples: |
+      - iPhone 13
+      - iPhone 14
+      - iPhone 15
+      - Galaxy S23
+      - Galaxy A54
+      - Moto G82
+      - Redmi Note 12
+      - Poco X5
+
+  - regex: telefone
+    examples: |
+      - \(?\d{2}\)?\s?9?\d{4}-?\d{4}
+      - \d{10,11}
+
+  - regex: email
+    examples: |
+      - [a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+
+
+  - regex: id_ordem
+    examples: |
+      - \b\d{1,6}\b
